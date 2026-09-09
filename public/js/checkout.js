@@ -58,6 +58,7 @@ document.getElementById('place-order-btn').addEventListener('click', () => {
         return;
     }
 
-    alert("Order placed successfully! Thank you!");
-    localStorage.removeItem('cart');
+   localStorage.removeItem('cart');
+window.location.href = "thankyou.html";
+
 });

@@ -13,9 +13,17 @@ function displayCart() {
     const itemDiv = document.createElement('div');
     itemDiv.className = "cart-item";
 
-    // Simple price logic: base price + $1 per topping
-    let price = 10 + pizza.toppings.length;
-    total += price;
+   let basePrice = pizza.size === "Small" ? 8 :
+                pizza.size === "Medium" ? 10 :
+                12;
+
+let crustPrice = pizza.crust === "Deep Dish" ? 2 : 0;
+
+let toppingPrice = pizza.toppings.length * 1.25;
+
+let price = basePrice + crustPrice + toppingPrice;
+total += price;
+
 
     itemDiv.innerHTML = `
       <p><strong>Pizza ${index + 1}</strong></p>
