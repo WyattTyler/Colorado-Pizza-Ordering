@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Pizza</title>
+    <link rel="stylesheet" href="../../public/css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Customize Your Pizza</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+</header>
+
+<section class="customize-section">
+    <h2>Build Your Pizza</h2>
+
+    <form id="customize-form">
+
+        <label>Choose Size:</label>
+        <select id="size-select">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+
+        <label>Choose Crust:</label>
+        <select id="crust-select">
+            <option value="Thin">Thin</option>
+            <option value="Hand Tossed">Hand Tossed</option>
+            <option value="Deep Dish">Deep Dish</option>
+        </select>
+
+        <label>Choose Sauce:</label>
+        <select id="sauce-select"></select>
+
+        <label>Choose Toppings:</label>
+        <div id="toppings-list"></div>
+
+        <button type="button" id="add-to-cart-btn">Add to Cart</button>
+
+    </form>
+</section>
+
+<script src="../../public/js/customize.js"></script>
+</body>
+</html>

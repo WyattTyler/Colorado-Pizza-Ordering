@@ -60,3 +60,27 @@ nav a {
     margin-top: 10px;
 }
 
+.customize-section {
+    padding: 20px;
+}
+
+.customize-section form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.customize-section label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#toppings-list div {
+    margin: 5px 0;
+}
+
+
