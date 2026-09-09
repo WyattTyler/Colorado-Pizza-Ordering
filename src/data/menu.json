@@ -5,7 +5,7 @@
     "description": "Mozzarella + signature sauce.",
     "sizes": ["Small", "Medium", "Large"],
     "basePrice": 10.99,
-    "image": "images/cheese.jpg",
+    "image": "cheese.jpg",
     "available": true
   },
   {
@@ -14,7 +14,7 @@
     "description": "Loaded with premium pepperoni.",
     "sizes": ["Small", "Medium", "Large"],
     "basePrice": 12.99,
-    "image": "images/pepperoni.jpg",
+    "image": "pepperoni.jpg",
     "available": true
   }
 ]
