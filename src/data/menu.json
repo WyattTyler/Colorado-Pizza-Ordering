@@ -1,0 +1,20 @@
+[
+  {
+    "id": "classic-cheese",
+    "name": "Classic Cheese",
+    "description": "Mozzarella + signature sauce.",
+    "sizes": ["Small", "Medium", "Large"],
+    "basePrice": 10.99,
+    "image": "images/cheese.jpg",
+    "available": true
+  },
+  {
+    "id": "pepperoni",
+    "name": "Pepperoni",
+    "description": "Loaded with premium pepperoni.",
+    "sizes": ["Small", "Medium", "Large"],
+    "basePrice": 12.99,
+    "image": "images/pepperoni.jpg",
+    "available": true
+  }
+]

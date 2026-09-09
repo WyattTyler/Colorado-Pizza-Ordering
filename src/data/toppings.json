@@ -1,0 +1,6 @@
+{
+  "sauces": ["Tomato", "Alfredo", "Pesto"],
+  "cheeses": ["Mozzarella", "Cheddar", "Parmesan"],
+  "veggies": ["Onions", "Peppers", "Olives", "Mushrooms"],
+  "meats": ["Pepperoni", "Sausage", "Ham", "Bacon"]
+}

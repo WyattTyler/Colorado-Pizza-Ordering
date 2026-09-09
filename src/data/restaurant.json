@@ -1,0 +1,14 @@
+{
+  "name": "Colorado Pizza Place",
+  "address": "123 Mountain View Rd, Denver, CO",
+  "phone": "(303) 555-0199",
+  "hours": {
+    "mon": "11am - 9pm",
+    "tue": "11am - 9pm",
+    "wed": "11am - 9pm",
+    "thu": "11am - 10pm",
+    "fri": "11am - 11pm",
+    "sat": "11am - 11pm",
+    "sun": "12pm - 8pm"
+  }
+}
