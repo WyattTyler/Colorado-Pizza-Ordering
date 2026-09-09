@@ -83,4 +83,31 @@ nav a {
     margin: 5px 0;
 }
 
+.checkout-section {
+    padding: 20px;
+}
+
+.checkout-section form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.checkout-section label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.summary-item {
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
 

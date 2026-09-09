@@ -35,25 +35,26 @@ fetch('../../src/data/toppings.json')
   })
   .catch(error => console.error('Error loading toppings:', error));
 
-
-// Add to cart button
 document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-  const size = document.getElementById('size-select').value;
-  const crust = document.getElementById('crust-select').value;
-  const sauce = document.getElementById('sauce-select').value;
+    const size = document.getElementById('size-select').value;
+    const crust = document.getElementById('crust-select').value;
+    const sauce = document.getElementById('sauce-select').value;
 
-  const selectedToppings = [];
-  document.querySelectorAll('#toppings-list input:checked').forEach(item => {
-    selectedToppings.push(item.value);
-  });
+    const selectedToppings = [];
+    document.querySelectorAll('#toppings-list input:checked').forEach(item => {
+        selectedToppings.push(item.value);
+    });
 
-  const pizza = {
-    size,
-    crust,
-    sauce,
-    toppings: selectedToppings
-  };
+    const pizza = {
+        size,
+        crust,
+        sauce,
+        toppings: selectedToppings
+    };
 
-  console.log("Pizza added to cart:", pizza);
-  alert("Pizza added to cart!");
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(pizza);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert("Pizza added to cart!");
 });
