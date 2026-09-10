@@ -67,13 +67,12 @@ nav a:hover {
 }
 
 .hero img {
-    width: 80%;
-    max-width: 900px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin: 0 auto 20px auto;
+    width: 100%;          /* full width across the top */
+    height: 350px;        /* keeps a nice consistent height */
+    object-fit: cover;    /* crops cleanly */
+    border-radius: 0;     /* removes rounded corners so it spans edge-to-edge */
     display: block;
+    margin: 0;            /* no centering margin */
 }
 
 /* Menu Grid */
