@@ -10,7 +10,6 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
 
-    /* Background texture or mountain image */
     background: #e9e9e9 url('../images/texture.png') center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -21,29 +20,27 @@ body {
 header {
     background: linear-gradient(135deg, #2f4f2f, #3b5f3b);
     color: white;
-    padding: 30px 20px; /* thicker premium header */
-    text-align: center; /* centered store name */
+    padding: 30px 20px;
+    text-align: center;
 
-    /* inner glow + outer shadow */
     box-shadow:
         inset 0 -4px 10px rgba(0,0,0,0.25),
         0 2px 6px rgba(0,0,0,0.25);
 
-    /* elegant accent line */
     border-bottom: 4px solid #8b6f47;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.4rem;
-    font-family: 'Cinzel', serif; /* FANCY HEADER FONT */
+    font-family: 'Cinzel', serif;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 /* Navigation */
 nav {
-    margin-top: 15px; /* moves nav below the title */
+    margin-top: 15px;
 }
 
 nav a {
@@ -67,15 +64,6 @@ nav a:hover {
     padding: 40px;
     text-align: center;
     color: #333;
-}
-
-.hero h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
 }
 
 .hero img {
@@ -224,13 +212,4 @@ nav a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* Footer */
-.footer {
-    background: #2f4f2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 0.9rem;
-    border-top: 4px solid #8b6f47;
-}
+/
