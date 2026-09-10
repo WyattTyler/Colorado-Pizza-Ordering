@@ -16,6 +16,21 @@ body {
     opacity: 0.98;
 }
 
+/* FULL-WIDTH HERO IMAGE */
+.hero {
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 0;
+}
+
 /* Header */
 header {
     background: linear-gradient(135deg, #2f4f2f, #3b5f3b);
@@ -59,48 +74,54 @@ nav a:hover {
     background: #3b5f3b;
 }
 
-/* Hero Section */
-.hero {
-    padding: 40px;
+/* About Section */
+.about {
     text-align: center;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #2f4f2f;
+    font-weight: 600;
+    position: relative;
+}
+
+.about h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #2f4f2f;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
     color: #333;
 }
 
-.hero img {
-    width: 100%;          /* full width across the top */
-    height: 350px;        /* keeps a nice consistent height */
-    object-fit: cover;    /* crops cleanly */
-    border-radius: 0;     /* removes rounded corners so it spans edge-to-edge */
+.about-img {
     display: block;
-    margin: 0;            /* no centering margin */
-}
-
-/* Menu Grid */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.menu-card {
-    background: white;
-    padding: 15px;
+    margin: 20px auto;
+    max-width: 700px;
     border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+.footer {
+    background: #2f4f2f;
+    color: white;
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 4px solid #8b6f47;
 }
-
-.menu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.menu-card img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.menu-card h3 {
-    margin-top: 
