@@ -67,8 +67,8 @@ nav a:hover {
 }
 
 .hero img {
-    width: 80%;              /* centered top image */
-    max-width: 900px;        /* prevents it from being too large */
+    width: 80%;
+    max-width: 900px;
     height: 350px;
     object-fit: cover;
     border-radius: 12px;
@@ -104,114 +104,4 @@ nav a:hover {
 }
 
 .menu-card h3 {
-    margin-top: 10px;
-    font-weight: 600;
-    color: #2f4f2f;
-    position: relative;
-}
-
-.menu-card h3::after {
-    content: "";
-    width: 60px;
-    height: 4px;
-    background: #2f4f2f;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-/* Customize Section */
-.customize-section {
-    padding: 20px;
-}
-
-.customize-section form {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 500px;
-    margin: auto;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.customize-section label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-    color: #2f4f2f;
-}
-
-#toppings-list div {
-    margin: 5px 0;
-}
-
-/* Checkout Section */
-.checkout-section {
-    padding: 20px;
-}
-
-.checkout-section form {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 500px;
-    margin: auto;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.checkout-section label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-    color: #2f4f2f;
-}
-
-.summary-item {
-    background: #f0f0f0;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-/* About Section */
-.about {
-    text-align: center;
-    padding: 30px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #2f4f2f;
-    font-weight: 600;
-    position: relative;
-}
-
-.about h2::after {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background: #2f4f2f;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-.about p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.about-img {
-    display: block;
-    margin: 20px auto;
-    max-width: 700px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-/
+    margin-top: 
