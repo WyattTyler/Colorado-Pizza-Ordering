@@ -115,6 +115,87 @@ nav a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
+/* ⭐ MENU SECTION — SIDE-BY-SIDE BOXES */
+.menu-section {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-section h2 {
+    font-size: 2rem;
+    color: #2f4f2f;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* The grid layout */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Individual menu cards */
+.menu-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+/* Pizza images */
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Pizza name */
+.menu-card h3 {
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+    color: #2f4f2f;
+    font-size: 1.3rem;
+}
+
+.menu-card h3::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #2f4f2f;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Description */
+.menu-card p {
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Price */
+.menu-price {
+    font-weight: 600;
+    color: #8b6f47;
+    font-size: 1.1rem;
+}
+
 /* Footer */
 .footer {
     background: #2f4f2f;
