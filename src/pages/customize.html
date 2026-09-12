@@ -13,7 +13,7 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
-        <a href="cart.html">Cart</a>
+        <a href="#" onclick="openCart()">Cart (<span id="cartCount">0</span>)</a>
         <a href="checkout.html">Checkout</a>
     </nav>
 </header>
@@ -23,31 +23,92 @@
 
     <form id="customize-form">
 
+        <!-- Pizza Name + Description (populated by JS when coming from menu) -->
+        <h3 id="customPizzaName"></h3>
+        <p id="customPizzaDescription"></p>
+
+        <!-- SIZE -->
         <label>Choose Size:</label>
-        <select id="size-select">
-            <option value="Small">Small</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
+        <select id="size" onchange="updatePrice()">
+            <option value="Small">Small (+$0.00)</option>
+            <option value="Medium" selected>Medium (+$2.00)</option>
+            <option value="Large">Large (+$4.00)</option>
         </select>
 
+        <!-- CRUST -->
         <label>Choose Crust:</label>
-        <select id="crust-select">
-            <option value="Thin">Thin</option>
-            <option value="Hand Tossed">Hand Tossed</option>
-            <option value="Deep Dish">Deep Dish</option>
+        <select id="crust" onchange="updatePrice()">
+            <option>Original</option>
+            <option>Thin N Crispy</option>
+            <option>Stuff Crust</option>
         </select>
 
-        <label>Choose Sauce:</label>
-        <select id="sauce-select"></select>
+        <!-- TOPPINGS -->
+        <h3>Choose Your Toppings</h3>
 
-        <label>Choose Toppings:</label>
-        <div id="toppings-list"></div>
+        <div class="topping-section">
+            <h4>🥩 Meat Toppings</h4>
+            <div id="meatToppings" class="toppings-list"></div>
+        </div>
 
-        <button type="button" id="add-to-cart-btn">Add to Cart</button>
+        <div class="topping-section">
+            <h4>🥬 Veggie Toppings</h4>
+            <div id="veggieToppings" class="toppings-list"></div>
+        </div>
+
+        <div class="topping-section">
+            <h4>🧀 Cheese Toppings</h4>
+            <div id="cheeseToppings" class="toppings-list"></div>
+        </div>
+
+        <!-- PRICE -->
+        <div class="price">
+            Price: $<span id="customPrice">0.00</span>
+        </div>
+
+        <button type="button" class="primary" onclick="addToCart()">Add to Cart</button>
 
     </form>
 </section>
 
-<script src="../../public/js/customize.js"></script>
+<!-- CART MODAL (same as index/menu pages) -->
+<div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+        <button class="close" onclick="closeCart()">&times;</button>
+        <h2>Your Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="summary">
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        </div>
+
+        <h3>Order Type</h3>
+        <label><input type="radio" name="orderType" value="pickup" checked onchange="updateSummary()"> Pickup</label>
+        <label><input type="radio" name="orderType" value="delivery" onchange="updateSummary()"> Delivery Fee (+$3.99)</label>
+
+        <div id="deliveryFields" class="hidden">
+            <input id="address" placeholder="Delivery address">
+            <input id="city" placeholder="City">
+            <input id="zip" placeholder="ZIP code">
+        </div>
+
+        <div class="summary">
+            <p>Tax: $<span id="tax">0.00</span></p>
+            <p>Delivery Fee: $<span id="deliveryFee">0.00</span></p>
+            <h3>Total: $<span id="total">0.00</span></h3>
+        </div>
+
+        <button class="primary" onclick="placeOrder()">Place Order</button>
+        <p id="orderMessage" class="message"></p>
+    </div>
+</div>
+
+<!-- JS FILES -->
+<script src="../../public/js/menu.js"></script>
+<script src="../../public/js/cart.js"></script>
+<script src="../../public/js/discounts.js"></script>
+<script src="../../public/js/app.js"></script>
+
 </body>
 </html>

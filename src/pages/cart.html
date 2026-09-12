@@ -14,19 +14,81 @@
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
         <a href="customize.html">Customize</a>
+        <a href="#" onclick="openCart()">Cart (<span id="cartCount">0</span>)</a>
         <a href="checkout.html">Checkout</a>
     </nav>
 </header>
 
 <section class="cart-section">
     <h2>Items in Your Cart</h2>
-    <div id="cart-items"></div>
 
-    <h3 id="cart-total"></h3>
+    <!-- Their JS expects id="cartItems" -->
+    <div id="cartItems"></div>
 
-    <button id="clear-cart-btn">Clear Cart</button>
+    <div class="summary">
+        <p>Subtotal: $<span id="subtotal">0.00</span></p>
+    </div>
+
+    <h3>Order Type</h3>
+    <label><input type="radio" name="orderType" value="pickup" checked onchange="updateSummary()"> Pickup</label>
+    <label><input type="radio" name="orderType" value="delivery" onchange="updateSummary()"> Delivery Fee (+$3.99)</label>
+
+    <div id="deliveryFields" class="hidden">
+        <input id="address" placeholder="Delivery address">
+        <input id="city" placeholder="City">
+        <input id="zip" placeholder="ZIP code">
+    </div>
+
+    <div class="summary">
+        <p>Tax: $<span id="tax">0.00</span></p>
+        <p>Delivery Fee: $<span id="deliveryFee">0.00</span></p>
+        <h3>Total: $<span id="total">0.00</span></h3>
+    </div>
+
+    <button class="primary" onclick="placeOrder()">Place Order</button>
+    <p id="orderMessage" class="message"></p>
+
+    <button id="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
 </section>
 
+<!-- CART MODAL (same as other pages, required for openCart()) -->
+<div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+        <button class="close" onclick="closeCart()">&times;</button>
+        <h2>Your Cart</h2>
+
+        <div id="cartItemsModal"></div>
+
+        <div class="summary">
+            <p>Subtotal: $<span id="subtotalModal">0.00</span></p>
+        </div>
+
+        <h3>Order Type</h3>
+        <label><input type="radio" name="orderTypeModal" value="pickup" checked onchange="updateSummary()"> Pickup</label>
+        <label><input type="radio" name="orderTypeModal" value="delivery" onchange="updateSummary()"> Delivery Fee (+$3.99)</label>
+
+        <div id="deliveryFieldsModal" class="hidden">
+            <input id="addressModal" placeholder="Delivery address">
+            <input id="cityModal" placeholder="City">
+            <input id="zipModal" placeholder="ZIP code">
+        </div>
+
+        <div class="summary">
+            <p>Tax: $<span id="taxModal">0.00</span></p>
+            <p>Delivery Fee: $<span id="deliveryFeeModal">0.00</span></p>
+            <h3>Total: $<span id="totalModal">0.00</span></h3>
+        </div>
+
+        <button class="primary" onclick="placeOrder()">Place Order</button>
+        <p id="orderMessageModal" class="message"></p>
+    </div>
+</div>
+
+<!-- JS FILES -->
+<script src="../../public/js/menu.js"></script>
 <script src="../../public/js/cart.js"></script>
+<script src="../../public/js/discounts.js"></script>
+<script src="../../public/js/app.js"></script>
+
 </body>
 </html>

@@ -14,7 +14,7 @@
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
         <a href="customize.html">Customize</a>
-        <a href="cart.html">Cart</a>
+        <a href="#" onclick="openCart()">Cart (<span id="cartCount">0</span>)</a>
     </nav>
 </header>
 
@@ -30,7 +30,7 @@
         <input type="text" id="customer-phone" required>
 
         <label>Order Type:</label>
-        <select id="order-type">
+        <select id="order-type" onchange="toggleDeliveryFields()">
             <option value="pickup">Pickup</option>
             <option value="delivery">Delivery</option>
         </select>
@@ -43,11 +43,52 @@
         <h2>Order Summary</h2>
         <div id="order-summary"></div>
 
-        <button type="button" id="place-order-btn">Place Order</button>
+        <button type="button" id="place-order-btn" onclick="placeOrder()">Place Order</button>
+
+        <p id="orderMessage" class="message"></p>
 
     </form>
 </section>
 
+<!-- CART MODAL (same as other pages) -->
+<div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+        <button class="close" onclick="closeCart()">&times;</button>
+        <h2>Your Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="summary">
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        </div>
+
+        <h3>Order Type</h3>
+        <label><input type="radio" name="orderType" value="pickup" checked onchange="updateSummary()"> Pickup</label>
+        <label><input type="radio" name="orderType" value="delivery" onchange="updateSummary()"> Delivery Fee (+$3.99)</label>
+
+        <div id="deliveryFields" class="hidden">
+            <input id="address" placeholder="Delivery address">
+            <input id="city" placeholder="City">
+            <input id="zip" placeholder="ZIP code">
+        </div>
+
+        <div class="summary">
+            <p>Tax: $<span id="tax">0.00</span></p>
+            <p>Delivery Fee: $<span id="deliveryFee">0.00</span></p>
+            <h3>Total: $<span id="total">0.00</span></h3>
+        </div>
+
+        <button class="primary" onclick="placeOrder()">Place Order</button>
+        <p id="orderMessageModal" class="message"></p>
+    </div>
+</div>
+
+<!-- JS FILES -->
+<script src="../../public/js/menu.js"></script>
+<script src="../../public/js/cart.js"></script>
+<script src="../../public/js/discounts.js"></script>
+<script src="../../public/js/app.js"></script>
 <script src="../../public/js/checkout.js"></script>
+
 </body>
 </html>
